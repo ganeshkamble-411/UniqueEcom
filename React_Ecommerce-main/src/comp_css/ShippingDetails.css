@@ -1,0 +1,77 @@
+/* --- Modern & Responsive Shipping Details Styles --- */
+ 
+/* Form Container */
+.shipping-details {
+    /* Responsive width: 90% of viewport, max-width of 500px on large screens */
+    width: 90%;
+    max-width: 500px;
+    margin: 3rem auto; /* More vertical space for better presentation */
+    padding: 30px;
+    
+    /* Modern Aesthetics */
+    background-color: #ffffff; /* Clean white background */
+    border: 1px solid #e0e0e0; /* Lighter, subtle border */
+    border-radius: 12px; /* Prominent rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Soft, noticeable shadow */
+}
+ 
+/* Heading */
+.shipping-details h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center; /* Center the heading for a clean look */
+}
+ 
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+}
+ 
+/* Labels */
+label {
+    margin-bottom: 5px;
+    font-weight: 600; /* Slightly bolder */
+    color: #555;
+    font-size: 0.95rem;
+}
+ 
+/* Input Fields */
+input {
+    padding: 12px; /* Increased padding for better tap target and visual weight */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Softly rounded input fields */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+/* Input Focus Effect (Crucial for modern feel) */
+input:focus {
+    outline: none;
+    border-color: #007bff; /* Primary blue focus color */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    background-color: #f7f9fb; /* Slight background change on focus */
+}
+ 
+/* Button Styling */
+button {
+    padding: 12px;
+    background-color: #ff00dd; /* Primary blue */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+ 
+/* Button Hover Effect */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px); /* Subtle lift on hover */
+}
