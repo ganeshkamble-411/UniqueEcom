@@ -8,7 +8,7 @@ import "../comp_css/order.css";
 
 const OrderDetails = () => {
   const navigate = useNavigate();
-  const userId = localStorage.getItem("userid");
+  const userId = localStorage.getItem("userId");
   const [deleted, setDeleted] = useState(false);
   const [allOrder, setAllOrder] = useState([]);
 

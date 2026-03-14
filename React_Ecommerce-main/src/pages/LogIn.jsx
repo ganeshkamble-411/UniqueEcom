@@ -53,7 +53,8 @@ const Login = () => {
         localStorage.setItem("jwtToken", token);
         localStorage.setItem("username", response.data.username);
         localStorage.setItem("roles", JSON.stringify(response.data.roles));
-        
+        localStorage.setItem("userId", response.data.userId);
+        localStorage.setItem("cartId", response.data.cartId);
  
         alert("Login successful!");
         navigate("/"); // redirect to home

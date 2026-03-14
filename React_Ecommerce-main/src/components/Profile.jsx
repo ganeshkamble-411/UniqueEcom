@@ -4,7 +4,7 @@ import "../comp_css/Profile.css";
 import Address from "../components/Address";
 import UpdateAddress from "../components/UpdateAddress";
 
-const userid = localStorage.getItem("userid");
+const userid = localStorage.getItem("userId");
 const passData={
   newpass:""
 }

@@ -13,7 +13,7 @@ const bg = {
 
 const Payment = () => {
   const [paymentData, setPaymentData] = useState({});
-  const userid = localStorage.getItem("userid");
+  const userid = localStorage.getItem("userId");
   const orderid = localStorage.getItem("orderid");
   const navigate = useNavigate();
 

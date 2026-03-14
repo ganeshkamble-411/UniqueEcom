@@ -16,7 +16,7 @@
 //   };
 //   const navigate = useNavigate();
 
-//   let userId = localStorage.getItem("userid");
+//   let userId = localStorage.getItem("userId");
 //   let name = localStorage.getItem("name");
 
 //   const handleLoginClick = () => {
@@ -131,7 +131,7 @@ const Navbar = () => {
     cursor: "pointer",
   };
 
-  const userId = localStorage.getItem("userid");
+  const userId = localStorage.getItem("userId");
   const name = localStorage.getItem("name");
   const token = localStorage.getItem("jwtToken");
 
@@ -152,6 +152,10 @@ const Navbar = () => {
   const handleLoginClick = () => {
     navigate("/login", { state: { from: location.pathname } });
   };
+
+  const handleProductClick = () => {
+    navigate("/product", { state: { from: location.pathname } });
+  }
 
   // ✅ Handle Logout
   const handleLogoutClick = () => {
@@ -181,10 +185,19 @@ const Navbar = () => {
         <FontAwesomeIcon icon={faSearch} className="search-icon" />
       </div>
 
+      <div style={iconStyle} onClick={handleProductClick} className="cart-button">
+        <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
+        <p style={{ margin: "4px" }}>Products</p>
+      </div>
+
       {/* Right Icons */}
       <div className="iconbutton">
         {/* Cart */}
-        <div style={iconStyle} onClick={handleCartClick} className="cart-button">
+        <div
+          style={iconStyle}
+          onClick={handleCartClick}
+          className="cart-button"
+        >
           <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
           <p style={{ margin: "4px" }}>Cart</p>
         </div>

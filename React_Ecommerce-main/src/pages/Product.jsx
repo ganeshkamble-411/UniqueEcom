@@ -10,7 +10,7 @@ const Product = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [priceOrder, setPriceOrder] = useState("All");
   const [nameSearch, setNameSearch] = useState("");
-  let userid = localStorage.getItem("userid");
+  let userid = localStorage.getItem("userId");
 
   const filterProducts = (category, priceOrder, nameSearch, data) => {
     let filteredProducts = data;
@@ -70,6 +70,7 @@ const Product = () => {
       .post(`/ecom/cart/add-product?userId=${userid}&productId=${productid}`)
       .then((response) => {
         localStorage.setItem("cartid", response.data.cartId);
+        console.log("response: ", response);
         alert("product added to Cart");
       })
       .catch((error) => {

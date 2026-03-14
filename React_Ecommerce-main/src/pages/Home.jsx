@@ -12,7 +12,7 @@ import Laptops_and_Tablets from "../picture/Laptops_and_Tablets.avif";
 import men_fashion from "../picture/men_fashion.avif";
 import Oil_and_ghee from "../picture/Oil_and_ghee.avif";
 import Smart_Televisions from "../picture/Smart_Televisions.avif";
-
+import "../comp_css/Home.css";
 
 const Home = () => {
   const veritycard = [
@@ -27,7 +27,17 @@ const Home = () => {
     Oil_and_ghee,
     Smart_Televisions,
   ];
+  
   const slideImages = [
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691935239_Freedom_Finds.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691950461_Handloom_Sarees_in_Colors_of_India.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691612739_Aaj_Ki_Deals_Desktop.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691935239_Freedom_Finds.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691950461_Handloom_Sarees_in_Colors_of_India.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691612739_Aaj_Ki_Deals_Desktop.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691935239_Freedom_Finds.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691950461_Handloom_Sarees_in_Colors_of_India.jpg?im=Resize=(1680,320)",
+    "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691612739_Aaj_Ki_Deals_Desktop.jpg?im=Resize=(1680,320)",
     "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691935239_Freedom_Finds.jpg?im=Resize=(1680,320)",
     "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691950461_Handloom_Sarees_in_Colors_of_India.jpg?im=Resize=(1680,320)",
     "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691612739_Aaj_Ki_Deals_Desktop.jpg?im=Resize=(1680,320)",
@@ -36,6 +46,30 @@ const Home = () => {
     "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691773740_Paytm_Wallet_1240x209.jpg?im=Resize=(1241,195)",
     "https://www.jiomart.com/images/cms/aw_rbslider/slides/1691435554_MobiKwik_1240x209.jpg?im=Resize=(1241,195)",
   ];
+
+  const heroBannerConfig = {
+    pagination: true,
+    navigation: true,
+    loop: true,
+    autoplay: true,
+    className: "hero-banner",
+    spaceBetween: '0',
+  };
+
+  const offersConfig = {
+    pagination: false,
+    navigation: true,
+    loop: true,
+    autoplay: false,
+    className: "offers-banner",
+    spaceBetween: '10',
+    styles: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }
+  };
+
   const styleFixedImg = {
     width: "100%",
     height: "25vh",
@@ -52,7 +86,7 @@ const Home = () => {
   return (
     <>
       <div>
-        <Slider images={slideImages} interval={4000} />
+        <Slider images={slideImages} swiperConfig={heroBannerConfig} />
       </div>
       <div className="ImageFixed">
         <img
@@ -62,11 +96,11 @@ const Home = () => {
         />
       </div>
       <div>
-        <Slider images={slideImages2} interval={5000} />
+        <Slider images={slideImages2} swiperConfig={offersConfig} />
       </div>
       <div className="cardbox">
         {veritycard.map((el, index) => (
-          <img src={el} alt={`image${index}`} />
+          <img key={index} src={el} alt={`image${index}`} />
         ))}
       </div>
     </>

@@ -8,7 +8,7 @@ const SingleProduct = () => {
   const navigate = useNavigate();
   const { productId } = useParams();
   const [product, setProduct] = useState({});
-  const userid = localStorage.getItem("userid");
+  const userid = localStorage.getItem("userId");
 
   useEffect(() => {
     axios
